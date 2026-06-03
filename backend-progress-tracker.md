@@ -70,7 +70,7 @@ Keep raw Node small. The goal is to understand what Express simplifies.
 - [x] Using external packages
 - [x] `path` module basics
 - [x] `fs` module basics
-- [ ] `process` object
+- [x] `process` object
 - [ ] Environment variables
 - [ ] HTTP module basics
 - [ ] Parse URL
