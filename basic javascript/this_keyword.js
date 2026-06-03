@@ -1,20 +1,20 @@
 //Topic-7
 //this refers the object that called the function
 
-const user = {
-    name: "lakshya",
+// const user = {
+//     name: "lakshya",
 
-    greet() {
-        console.log(this.name);
-        console.log(this.name === user.name)
-        console.log(this === user)
+//     greet() {
+//         console.log(this.name);
+//         console.log(this.name === user.name)
+//         console.log(this === user)
 
-    }
-}
+//     }
+// }
 
-// inside the greet() this===user
+// // inside the greet() this===user
 
-user.greet();
+// user.greet();
 
 //using this. in method we can use it for different object,without need to know the object name 
 //this depends on how a function is called, not where it was written.we 
