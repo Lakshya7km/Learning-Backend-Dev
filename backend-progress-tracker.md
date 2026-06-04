@@ -89,12 +89,12 @@ Keep raw Node small. The goal is to understand what Express simplifies.
 
 ### Self-Test
 
-- [] Explain Node.js
-- [ ] Explain `package.json`
-- [ ] Explain browser JavaScript vs Node.js
-- [ ] Explain request object
-- [ ] Explain response object
-- [ ] Explain why Express exists
+- [x] Explain Node.js
+- [x] Explain `package.json`
+- [x] Explain browser JavaScript vs Node.js
+- [x] Explain request object
+- [x] Explain response object
+- [x] Explain why Express exists
 
 ## Phase 3: Express.js and REST APIs
 
