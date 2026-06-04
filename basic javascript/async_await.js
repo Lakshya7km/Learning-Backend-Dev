@@ -59,7 +59,7 @@ greet().then((data)=>{
 
 
 //Error Handling with await
-
+//in promise
 // getUser()
 //     .then((user) => {
 //         console.log(user);

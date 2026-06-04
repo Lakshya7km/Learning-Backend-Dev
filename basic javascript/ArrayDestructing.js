@@ -83,4 +83,6 @@ console.log(remaining)
 
 const a=12;
 const b=12;
-console.log(a==b)
+//weakly inequality js try to convert the type
+console.log(a=="a")//true
+console.log(a==="a")//false

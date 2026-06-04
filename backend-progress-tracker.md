@@ -71,25 +71,25 @@ Keep raw Node small. The goal is to understand what Express simplifies.
 - [x] `path` module basics
 - [x] `fs` module basics
 - [x] `process` object
-- [ ] Environment variables
-- [ ] HTTP module basics
-- [ ] Parse URL
-- [ ] Parse JSON request body
-- [ ] Send JSON response
+- [x] Environment variables
+- [x] HTTP module basics
+- [x] Parse URL
+- [x] Parse JSON request body
+- [x] Send JSON response
 
 ### Mini Build: Raw Node Users API
 
-- [ ] Create raw HTTP server
-- [ ] `GET /health`
-- [ ] `GET /users`
-- [ ] `POST /users`
-- [ ] Save users to JSON file
-- [ ] Handle invalid JSON body
-- [ ] Handle unknown routes
+- [x] Create raw HTTP server
+- [x] `GET /health`
+- [x] `GET /users`
+- [x] `POST /users`
+- [x] Save users to JSON file
+- [x] Handle invalid JSON body
+- [x] Handle unknown routes
 
 ### Self-Test
 
-- [ ] Explain Node.js
+- [] Explain Node.js
 - [ ] Explain `package.json`
 - [ ] Explain browser JavaScript vs Node.js
 - [ ] Explain request object
