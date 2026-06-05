@@ -100,24 +100,24 @@ Keep raw Node small. The goal is to understand what Express simplifies.
 
 ### Core Topics
 
-- [ ] Express setup
-- [ ] Routing
-- [ ] Controllers
-- [ ] Services
-- [ ] Middlewares
-- [ ] Request-response lifecycle
-- [ ] HTTP methods
-- [ ] HTTP status codes
-- [ ] REST API design
-- [ ] Input validation
-- [ ] Global error format
-- [ ] Central error handling
-- [ ] Logging basics
-- [ ] `dotenv`
-- [ ] CORS
-- [ ] Request body size limits
-- [ ] API versioning basics
-- [ ] Postman or Thunder Client
+- [x] Express setup
+- [x] Routing
+- [x] Controllers
+- [x] Services
+- [x] Middlewares
+- [x] Request-response lifecycle
+- [x] HTTP methods
+- [x] HTTP status codes
+- [x] REST API design
+- [x] Input validation
+- [x] Global error format
+- [x] Central error handling
+- [x] Logging basics
+- [x] `dotenv`
+- [x] CORS
+- [x] Request body size limits
+- [x] API versioning basics
+- [x] Postman or Thunder Client
 
 ### Project: Task Management API
 

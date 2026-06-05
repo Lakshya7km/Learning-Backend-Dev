@@ -79,7 +79,7 @@ const server = http.createServer((req, res) => {
             try {
                 console.log(typeof body)
                 console.log("RAW BODY:");
-console.log(JSON.stringify(body));
+                console.log(JSON.stringify(body));
                 const user = JSON.parse(body)//JSON string to object coversion
                 console.log(user);
                 console.log(typeof user)

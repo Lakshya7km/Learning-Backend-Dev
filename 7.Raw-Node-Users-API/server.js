@@ -67,10 +67,7 @@ const server = http.createServer((req, res) => {
                             console.log(err)
                             return res.end(JSON.stringify({ message: "Failed to save" }))
                         } else {
-                            const resp = {
-                                message: "User Created"
-                            }
-                            res.end(JSON.stringify(resp))
+                            res.end(JSON.stringify({ message: "User Created" }))
                         }
                     })
 
