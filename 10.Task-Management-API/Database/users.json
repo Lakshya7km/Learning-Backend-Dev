@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "id": 1,
+    "name": "Lakshya",
+    "email": "lakshya@gmail.com",
+    "password": "$2b$10$W6UexmouG5ZCw0VHMJMfsOShMmb8KD2KHBs.z5mXFL17keH6rmsM6",
+    "profession": "student"
+  }
+]

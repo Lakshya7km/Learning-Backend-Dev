@@ -3,7 +3,8 @@
     "bcrypt": "^6.0.0",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "helmet": "^8.2.0"
+    "helmet": "^8.2.0",
+    "jsonwebtoken": "^9.0.3"
   },
   "name": "10.task-management-api",
   "version": "1.0.0",
