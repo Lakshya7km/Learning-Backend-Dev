@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
-
-
+const jwt = require("jsonwebtoken");
+require('dotenv').config()
 const User = require('../models/User.model')
 
 const registerUser = async (req, res) => {
@@ -8,7 +8,7 @@ const registerUser = async (req, res) => {
 
     try {
 
-        //extract var from req.body
+        //1.extract var from req.body
         const {
             name,
             username,
@@ -19,10 +19,10 @@ const registerUser = async (req, res) => {
             role,
         } = req.body;
 
-        //validate input if any required field is missing return 400 bad req.
+        //2.validate input if any required field is missing return 400 bad req.
 
         if (!email || !username || !password) {
-            res.status(400).json({
+            return res.status(400).json({
                 message: "required field are missing"
             })
         }
@@ -50,9 +50,9 @@ const registerUser = async (req, res) => {
 
         const hashedPassword = await bcrypt.hash(password, 10)
 
-        //5. create teh user in the data base
+        //5. create the user in the data base
 
-        User.create({
+        const user = await User.create({
 
             name,
             username,
@@ -78,8 +78,65 @@ const registerUser = async (req, res) => {
 
 
 
+const loginUser = async (req, res) => {
+
+    try {
+        const { email, password } = req.body;
+        //check the input first
+
+        if (!email || !password) {
+            return res.status(400).json({
+                message: "required field are missing"
+            })
+        }
+
+        //validate the input
+        const user = await User.findOne({
+            email: email,
+        })
+        if (!user) {
+            return res.status(404).json({
+                message: "Invalid Credential"
+            })
+        }
+        console.log(user)
+        //compare the password
+
+        const isMatch = await bcrypt.compare(password, user.password);
+        if (!isMatch) {
+            return res.status(401).json({
+                message: "Unauthorized access"
+            })
+        }
+
+
+        //sign jwt token for the logged in user
+
+        const token = jwt.sign(
+            {
+                id: user._id,
+                role: user.role,
+            }, process.env.JWT_SECRET,
+            {
+                expiresIn: '1hr'
+            }
+        )
+        res.status(200).json({
+            message: `welcome ${user.username}`,
+            token: token
+        })
+
+
+       
+
+    } catch (err) {
+        console.log(err)
+
+    }
+}
 module.exports = {
-    registerUser
+    registerUser,
+    loginUser
 }
 
 // const findOneUser = async (email, username) => {

@@ -12,16 +12,13 @@ dns.setServers(['1.1.1.1', '8.8.8.8']); // Bypasses network DNS restrictions
 
 connectDB();
 
+app.get('/',(req,res)=>{
+    res.json({
+        message:"Server running fine"
+    })
+})
 
-app.use('/api/v1/auth',authRoutes)
-
-
-
-
-
-
-
-
-app.listen(PORT,()=>{
+app.use('/api/v1/auth', authRoutes)
+app.listen(PORT, () => {
     console.log("Server is running")
 })
